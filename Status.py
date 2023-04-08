@@ -37,7 +37,7 @@ async def main_piyushchecker():
                     try:
                         yyy_piyu = await app.send_message(bot, "/start")
                         aaa = yyy_piyu.id
-                        await asyncio.sleep(15)
+                        await asyncio.sleep(8)
                         zzz_piyu = app.get_chat_history(bot, limit = 1)
                         async for ccc in zzz_piyu:
                             bbb = ccc.id
@@ -45,7 +45,7 @@ async def main_piyushchecker():
                             xxx_piyu += f"\n\n╭⎋ **[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.send_message(int(GRP_ID), f"**[{bot_info.first_name}](tg://user?id={bot_info.id}) ᴏғғ ʜᴀɪ. ᴀᴄᴄʜᴀ ʜᴜᴀ ᴅᴇᴋʜ ʟɪʏᴀ ᴍᴀɪɴᴇ.**")
+                                    await app.send_message(int(GRP_ID), f"**[{bot_info.first_name}](tg://user?id={bot_info.id}) ɪꜱ ᴅᴇᴀᴅ 💀. ᴊᴀᴀᴋʀ ᴏɴ ᴋʀʟᴏ ᴊᴀʟᴅɪ ꜱᴇ ✅.**")
                                 except Exception:...
                             await app.read_chat_history(bot)
                         else:
@@ -57,9 +57,9 @@ async def main_piyushchecker():
                 time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
                 last_update = time.strftime(f"%d %b %Y")
                 last_updates = time.strftime(f"%I:%M %p")
-                xxx_piyu += f"\n\n➻ **ʟᴀꜱᴛ ᴄʜᴇᴄᴋ ᴏɴ** :\n➻ **ᴅᴀᴛᴇ** : {last_update}\n➻ **ᴛɪᴍᴇ** : {last_updates}\n\n<u>๏ ʀᴇғʀᴇsʜᴇs ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴡɪᴛʜɪɴ 10 ᴍɪɴᴜᴛᴇs.</u>\n\n<b>**๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @{(await app.get_chat(CHANNEL_ID)).username}**</b>"
+                xxx_piyu += f"\n\n➻ **ʟᴀꜱᴛ ᴄʜᴇᴄᴋ ᴏɴ** :\n➻ **ᴅᴀᴛᴇ** : {last_update}\n➻ **ᴛɪᴍᴇ** : {last_updates}\n\n<u>๏ ʀᴇғʀᴇsʜᴇs ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴡɪᴛʜɪɴ 30 ᴍɪɴᴜᴛᴇs.</u>\n\n<b>**๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @{(await app.get_chat(CHANNEL_ID)).username}**</b>"
                 await app.edit_message_text(int(CHANNEL_ID), MESSAGE_ID, xxx_piyu)
                 print(f"Last checked on: {last_update}")                
-                await asyncio.sleep(600)
+                await asyncio.sleep(1800)
                         
 app.run(main_piyushchecker())
