@@ -37,7 +37,7 @@ async def main_piyushchecker():
                     try:
                         yyy_piyu = await app.send_message(bot, "/start")
                         aaa = yyy_piyu.id
-                        await asyncio.sleep(30)
+                        await asyncio.sleep(15)
                         zzz_piyu = app.get_chat_history(bot, limit = 1)
                         async for ccc in zzz_piyu:
                             bbb = ccc.id
@@ -60,6 +60,6 @@ async def main_piyushchecker():
                 xxx_piyu += f"\n\n➻ **ʟᴀꜱᴛ ᴄʜᴇᴄᴋ ᴏɴ** :\n➻ **ᴅᴀᴛᴇ** : {last_update}\n➻ **ᴛɪᴍᴇ** : {last_updates}\n\n<u>๏ ʀᴇғʀᴇsʜᴇs ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴡɪᴛʜɪɴ 10 ᴍɪɴᴜᴛᴇs.</u>\n\n<b>**๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @{(await app.get_chat(CHANNEL_ID)).username}**</b>"
                 await app.edit_message_text(int(CHANNEL_ID), MESSAGE_ID, xxx_piyu)
                 print(f"Last checked on: {last_update}")                
-                await asyncio.sleep(2000)
+                await asyncio.sleep(600)
                         
 app.run(main_piyushchecker())
