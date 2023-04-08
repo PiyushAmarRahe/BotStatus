@@ -28,7 +28,7 @@ async def main_piyushchecker():
                 print("Checking...")
                 xxx_piyu = f"**✨ <u>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {(await app.get_chat(CHANNEL_ID)).title}**</u>\n\n**<u>💫  ʀᴇᴀʟ ᴛɪᴍᴇ ʙᴏᴛ's sᴛᴀᴛᴜs**</u>"
                 for bot in BOT_LIST:
-                    await asyncio.sleep(15)
+                    await asyncio.sleep(10)
                     try:
                         bot_info = await app.get_users(bot)
                     except Exception:
@@ -37,7 +37,7 @@ async def main_piyushchecker():
                     try:
                         yyy_piyu = await app.send_message(bot, "/start")
                         aaa = yyy_piyu.id
-                        await asyncio.sleep(8)
+                        await asyncio.sleep(7)
                         zzz_piyu = app.get_chat_history(bot, limit = 1)
                         async for ccc in zzz_piyu:
                             bbb = ccc.id
